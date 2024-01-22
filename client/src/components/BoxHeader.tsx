@@ -33,7 +33,6 @@
 
 import React from "react";
 import FlexBetween from "./FlexBetween";
-import { useTheme } from "@mui/material";
 import { Box, Typography } from "@mui/material";
 
 type Props = {
@@ -44,9 +43,8 @@ type Props = {
 };
 
 const BoxHeader = ({ icon, title, subtitle, sideText }: Props) => {
-  const { palette } = useTheme();
   return (
-    <FlexBetween color={palette.grey[400]} margin={2}>
+    <FlexBetween color="#c2c5ce" margin={2}>
       <FlexBetween>
         {icon}
         <Box width="100%">
@@ -56,7 +54,7 @@ const BoxHeader = ({ icon, title, subtitle, sideText }: Props) => {
           <Typography variant="h6">{subtitle}</Typography>
         </Box>
       </FlexBetween>
-      <Typography variant="h5" fontWeight="700" color={palette.secondary[500]}>
+      <Typography variant="h5" fontWeight="700" color="#f2b455">
         {sideText}
       </Typography>
     </FlexBetween>
