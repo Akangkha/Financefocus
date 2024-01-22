@@ -29,11 +29,8 @@ Color scheme:
  
 |   Name      | Color Hex  | Preview       |
 |-------------|------------|---------------|
-| primary     | "#12efc8"  | <span style="color:#12efc8; background-color:#12efc8; padding: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
-| secondary   | "#f2b455"  | <span style="color:#f2b455; background-color:#f2b455; padding: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
-| tertiary    | "#8884d8"  | <span style="color:#8884d8; background-color:#8884d8; padding: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
-| grey        | "#b3b6c2"  | <span style="color:#b3b6c2; background-color:#b3b6c2; padding: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
-| background  | "#2d2d34"  | <span style="color:#2d2d34; background-color:#2d2d34; padding: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
-
-
-
+| primary     | "#12efc8"  | ![#12efc8](https://via.placeholder.com/15/12efc8/000000?text=+) |
+| secondary   | "#f2b455"  | ![#f2b455](https://via.placeholder.com/15/f2b455/000000?text=+) |
+| tertiary    | "#8884d8"  | ![#8884d8](https://via.placeholder.com/15/8884d8/000000?text=+) |
+| grey        | "#b3b6c2"  | ![#b3b6c2](https://via.placeholder.com/15/b3b6c2/000000?text=+) |
+| background  | "#2d2d34"  | ![#2d2d34](https://via.placeholder.com/15/2d2d34/000000?text=+) |
