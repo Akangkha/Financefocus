@@ -1,7 +1,5 @@
 # Financefocus
----
 
-### React + TypeScript + Vite
 
 ---
 
