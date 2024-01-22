@@ -27,13 +27,13 @@ The MERN stack project aims to facilitate the retrieval and analysis of user-spe
 
 Color scheme:
  
-|   Name    | Color Hex  |
-|-----------|------------|
-| primary   | "#12efc8"  |
-| secondary | "#f2b455"  |
-| tertiary  | "#8884d8"  |
-| grey      | "#b3b6c2"  |
-| background| "#2d2d34"  |
+|   Name      | Color Hex  | Preview       |
+|-------------|------------|---------------|
+| primary     | "#12efc8"  | <span style="color:#12efc8; background-color:#12efc8; padding: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
+| secondary   | "#f2b455"  | <span style="color:#f2b455; background-color:#f2b455; padding: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
+| tertiary    | "#8884d8"  | <span style="color:#8884d8; background-color:#8884d8; padding: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
+| grey        | "#b3b6c2"  | <span style="color:#b3b6c2; background-color:#b3b6c2; padding: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
+| background  | "#2d2d34"  | <span style="color:#2d2d34; background-color:#2d2d34; padding: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
 
 
 
