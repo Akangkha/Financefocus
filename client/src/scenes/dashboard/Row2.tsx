@@ -2,8 +2,8 @@ import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
 import FlexBetween from "@/components/FlexBetween";
 import { useGetKpisQuery, useGetProductsQuery } from "@/state/api";
-import { Box, Typography, useTheme } from "@mui/material";
-import React, { useMemo } from "react";
+import { Box, Typography } from "@mui/material";
+import { useMemo } from "react";
 import {
   Tooltip,
   CartesianGrid,
@@ -26,8 +26,7 @@ const pieData = [
 ];
 
 const Row2 = () => {
-  const { palette } = useTheme();
-  const pieColors = [palette.primary[800], palette.primary[300]];
+  const pieColors = ["#076050", "#71f5de"];
   const { data: operationalData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
 
@@ -76,7 +75,7 @@ const Row2 = () => {
               bottom: 55,
             }}
           >
-            <CartesianGrid vertical={false} stroke={palette.grey[800]} />
+            <CartesianGrid vertical={false} stroke="#48494e" />
             <XAxis
               dataKey="name"
               tickLine={false}
@@ -101,13 +100,13 @@ const Row2 = () => {
               yAxisId="left"
               type="monotone"
               dataKey="Non Operational Expenses"
-              stroke={palette.tertiary[500]}
+              stroke="#8884d8"
             />
             <Line
               yAxisId="right"
               type="monotone"
               dataKey="Operational Expenses"
-              stroke={palette.primary.main}
+              stroke="#12efc8"
             />
           </LineChart>
         </ResponsiveContainer>
@@ -140,7 +139,7 @@ const Row2 = () => {
           </PieChart>
           <Box ml="-0.7rem" flexBasis="40%" textAlign="center">
             <Typography variant="h5">Target Sales</Typography>
-            <Typography m="0.3rem 0" variant="h3" color={palette.primary[300]}>
+            <Typography m="0.3rem 0" variant="h3" color="#d1d3da">
               83
             </Typography>
             <Typography variant="h6">
@@ -162,7 +161,7 @@ const Row2 = () => {
       <DashboardBox gridArea="f">
         <BoxHeader title="Product Prices vs Expenses" sideText="+4%" />
         <ResponsiveContainer width="100%" height="80%">
-          <ScatterChart  
+          <ScatterChart
             margin={{
               top: 20,
               right: 25,
@@ -170,7 +169,7 @@ const Row2 = () => {
               left: -10,
             }}
           >
-            <CartesianGrid stroke={palette.grey[800]} />
+            <CartesianGrid stroke="#48494e" />
             <XAxis
               type="number"
               dataKey="price"
@@ -194,7 +193,7 @@ const Row2 = () => {
             <Scatter
               name="Product Expense Ratio"
               data={productExpenseData}
-              fill={palette.tertiary[500]}
+              fill="#8884d8"
             />
           </ScatterChart>
         </ResponsiveContainer>
