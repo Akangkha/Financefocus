@@ -25,5 +25,15 @@ The MERN stack project aims to facilitate the retrieval and analysis of user-spe
 - **Predictive Analytics:**
   - Integrates a Regression model for predicting future financial trends, enabling the system to forecast next-year predictions based on historical data.
 
+Color scheme:
+ 
+|   Name    | Color Hex  |
+|-----------|------------|
+| primary   | "#12efc8"  |
+| secondary | "#f2b455"  |
+| tertiary  | "#8884d8"  |
+| grey      | "#b3b6c2"  |
+| background| "#2d2d34"  |
+
 
 
