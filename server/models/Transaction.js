@@ -11,8 +11,8 @@ const TransactionSchema = new Schema(
       required: true,
     },
     amount: {
-      type: mongoose.Types.Currency,
-      currency: "USD",
+      type: Number,
+      default: 0,
       get: (v) => v / 100,
     },
     productIds: [
