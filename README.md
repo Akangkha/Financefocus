@@ -1,9 +1,12 @@
 # Financefocus
-<br>
+### React + TypeScript + Vite
+
 ---
-#### React + TypeScript + Vite<br>
-___
-<br>The MERN stack project aims to facilitate the retrieval and analysis of user-specific financial data, including daily, monthly, and yearly expenses. The system's primary objective is to calculate key financial metrics such as total profit, revenue, and other relevant indicators for a specified product. The results are displayed through an intuitive and visually appealing dashboard that leverages graphical user interfaces to enhance data interpretation.<br><br>
+
+The MERN stack project aims to facilitate the retrieval and analysis of user-specific financial data, including daily, monthly, and yearly expenses. The system's primary objective is to calculate key financial metrics such as total profit, revenue, and other relevant indicators for a specified product. The results are displayed through an intuitive and visually appealing dashboard that leverages graphical user interfaces to enhance data interpretation.
+
+---
+
 
 ## Project Overview
 
