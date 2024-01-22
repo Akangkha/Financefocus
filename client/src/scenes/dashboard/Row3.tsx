@@ -6,7 +6,7 @@ import {
   useGetProductsQuery,
   useGetTransactionsQuery,
 } from "@/state/api";
-import { Typography, useTheme } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
 import { DataGrid, GridCellParams } from "@mui/x-data-grid";
 import { useMemo } from "react";
@@ -14,7 +14,6 @@ import { Cell, Pie, PieChart } from "recharts";
 
 const Row3 = () => {
   const { data: kpiData } = useGetKpisQuery();
-  const { palette } = useTheme();
   const { data: productData } = useGetProductsQuery();
   const { data: transactionsData } = useGetTransactionsQuery();
   console.log("transactionData:", transactionsData);
@@ -74,7 +73,7 @@ const Row3 = () => {
         (params.value as Array<string>).length,
     },
   ];
-  const pieColors = [palette.primary[800], palette.primary[300]];
+  const pieColors = ["#076050", "#71f5de"];
   return (
     <>
       <DashboardBox gridArea="g">
@@ -89,14 +88,14 @@ const Row3 = () => {
           height="180px"
           sx={{
             "& .MuiDataGrid-root": {
-              color: palette.grey[300],
+              color: "#d1d3da",
               border: "none",
             },
             "& .MuiDataGrid-cell": {
-              borderBottom: `1px solid ${palette.grey[800]} !important`,
+              borderBottom: `1px solid "#48494e" !important`,
             },
             "& .MuiDataGrid-columnHeaders": {
-              borderBottom: `1px solid ${palette.grey[800]} !important`,
+              borderBottom: `1px solid "#48494e" !important`,
             },
             "& .MuiDataGrid-columnSeparator": {
               visibility: "hidden",
@@ -124,14 +123,14 @@ const Row3 = () => {
           height="250px"
           sx={{
             "& .MuiDataGrid-root": {
-              color: palette.grey[300],
+              color: "#d1d3da",
               border: "none",
             },
             "& .MuiDataGrid-cell": {
-              borderBottom: `1px solid ${palette.grey[800]} !important`,
+              borderBottom: `1px solid "#48494e" !important`,
             },
             "& .MuiDataGrid-columnHeaders": {
-              borderBottom: `1px solid ${palette.grey[800]} !important`,
+              borderBottom: `1px solid "#48494e"!important`,
             },
             "& .MuiDataGrid-columnSeparator": {
               visibility: "hidden",
@@ -179,18 +178,21 @@ const Row3 = () => {
         <Box
           height="15px"
           margin="1.25rem 1rem 0.4rem 1rem"
-          bgcolor={palette.primary[800]}
+          bgcolor="#076050"
           borderRadius="1rem"
         >
           <Box
             height="15px"
-            bgcolor={palette.primary[600]}
+            bgcolor="#71f5de"
             borderRadius="1rem"
             width="40%"
           ></Box>
         </Box>
         <Typography margin="0 1rem" variant="h6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error qui dolor dolore. Atque inventore, aliquam ipsa ex fugit natus quasi molestiae recusandae qui hic id deleniti, exercitationem doloremque ut minus?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error qui
+          dolor dolore. Atque inventore, aliquam ipsa ex fugit natus quasi
+          molestiae recusandae qui hic id deleniti, exercitationem doloremque ut
+          minus?
         </Typography>
       </DashboardBox>
     </>

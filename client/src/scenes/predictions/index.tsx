@@ -1,7 +1,7 @@
 import DashboardBox from "@/components/DashboardBox";
 import FlexBetween from "@/components/FlexBetween";
 import { useGetKpisQuery } from "@/state/api";
-import { Box, Button, Typography, useTheme } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { useMemo, useState } from "react";
 import {
   CartesianGrid,
@@ -17,7 +17,7 @@ import {
 import regression, { DataPoint } from "regression";
 
 const Predictions = () => {
-  const { palette } = useTheme();
+  
   const [isPredictions, setIsPredictions] = useState(false);
   const { data: kpiData } = useGetKpisQuery();
 
@@ -55,8 +55,8 @@ const Predictions = () => {
         <Button
           onClick={() => setIsPredictions(!isPredictions)}
           sx={{
-            color: palette.grey[900],
-            backgroundColor: palette.grey[700],
+            color: "#242427",
+            backgroundColor: "#6b6d74",
             boxShadow: "0.1rem 0.1rem 0.1rem 0.1rem rgba(0,0,0,.4)",
           }}
         >
@@ -73,7 +73,7 @@ const Predictions = () => {
             bottom: 100,
           }}
         >
-          <CartesianGrid strokeDasharray="3 3" stroke={palette.grey[800]} />
+          <CartesianGrid strokeDasharray="3 3" stroke="#48494e" />
           <XAxis dataKey="name" tickLine={false} style={{ fontSize: "10px" }}>
             <Label value="Month" offset={-5} position="insideBottom" />
           </XAxis>
@@ -95,7 +95,7 @@ const Predictions = () => {
           <Line
             type="monotone"
             dataKey="Actual Revenue"
-            stroke={palette.primary.main}
+            stroke="#12efc8"
             strokeWidth={0}
             dot={{ strokeWidth: 5 }}
           />
@@ -109,7 +109,7 @@ const Predictions = () => {
             <Line
               strokeDasharray="5 5"
               dataKey="Predicted Revenue"
-              stroke={palette.secondary[500]}
+              stroke="#f2b455"
             />
           )}
         </LineChart>

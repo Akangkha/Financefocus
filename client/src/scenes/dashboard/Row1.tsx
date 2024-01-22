@@ -1,7 +1,6 @@
 import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
 import { useGetKpisQuery } from "@/state/api";
-import {  useTheme } from "@mui/material";
 import { useMemo } from "react";
 import {
   AreaChart,
@@ -31,7 +30,7 @@ const Row1 = () => {
       return [];
     }
   }, [data]);
-   
+
   const revenue = useMemo(() => {
     return (
       data &&
@@ -56,13 +55,14 @@ const Row1 = () => {
     );
   }, [data]);
 
-  const { palette } = useTheme();
   return (
     <>
       <DashboardBox gridArea="a">
-      <BoxHeader title="Revenue and Expenses" 
-        subtitle="top line represents revenue , bottom line represents expenses"
-        sideText="+6%"></BoxHeader>
+        <BoxHeader
+          title="Revenue and Expenses"
+          subtitle="top line represents revenue , bottom line represents expenses"
+          sideText="+6%"
+        ></BoxHeader>
         <ResponsiveContainer width="100%" height="70%">
           <AreaChart
             width={730}
@@ -114,17 +114,19 @@ const Row1 = () => {
         </ResponsiveContainer>
       </DashboardBox>
       <DashboardBox gridArea="b">
-      <BoxHeader title="Profit and revenue" 
-        subtitle="top line represents revenue , bottom line represents expenses"
-        sideText="+4%"></BoxHeader>
+        <BoxHeader
+          title="Profit and revenue"
+          subtitle="top line represents revenue , bottom line represents expenses"
+          sideText="+4%"
+        ></BoxHeader>
         <ResponsiveContainer width="100%" height="65%">
           <LineChart
             width={500}
             height={400}
             data={revenueProfit}
-            margin={{ top: 15, right: 5, left: -10, bottom:-20 }}
+            margin={{ top: 15, right: 5, left: -10, bottom: -20 }}
           >
-                       <CartesianGrid vertical={false} stroke={palette.grey[800]} />
+            <CartesianGrid vertical={false} stroke="#48494e" />
 
             <XAxis
               dataKey="name"
@@ -136,9 +138,8 @@ const Row1 = () => {
               tickLine={false}
               axisLine={false}
               style={{ fontSize: "10px" }}
-         
             />
-           <YAxis
+            <YAxis
               yAxisId="right"
               orientation="right"
               tickLine={false}
@@ -156,13 +157,13 @@ const Row1 = () => {
               yAxisId="left"
               type="monotone"
               dataKey="profit"
-              stroke={palette.tertiary[500]}
+              stroke="#8884d8"
             />
             <Line
               yAxisId="right"
               type="monotone"
               dataKey="revenue"
-              stroke={palette.primary.main}
+              stroke="#12efc8"
             />
           </LineChart>
         </ResponsiveContainer>
@@ -188,19 +189,11 @@ const Row1 = () => {
           >
             <defs>
               <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
-                <stop
-                  offset="5%"
-                  stopColor={palette.primary[300]}
-                  stopOpacity={0.8}
-                />
-                <stop
-                  offset="95%"
-                  stopColor={palette.primary[300]}
-                  stopOpacity={0}
-                />
+                <stop offset="5%" stopColor="#71f5de" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#71f5de" stopOpacity={0} />
               </linearGradient>
             </defs>
-            <CartesianGrid vertical={false} stroke={palette.grey[800]} />
+            <CartesianGrid vertical={false} stroke="#48494e" />
             <XAxis
               dataKey="name"
               axisLine={false}
@@ -215,6 +208,7 @@ const Row1 = () => {
             <Tooltip />
             <Bar dataKey="revenue" fill="url(#colorRevenue)" />
           </BarChart>
+          
         </ResponsiveContainer>
       </DashboardBox>
     </>
