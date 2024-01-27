@@ -42,6 +42,20 @@ const Navbar = () => {
             predictions
           </Link>
         </Box>
+        <Box sx={{ "&:hover": { color: "#71f5de" } }}>
+          <Link
+            to="/auth"
+            onClick={() => {
+              localStorage.setItem("auth", "false");
+            }}
+            style={{
+              textDecoration: "inherit",
+              color: "#71f5de",
+            }}
+          >
+            Log out
+          </Link>
+        </Box>
       </FlexBetween>
     </FlexBetween>
   );

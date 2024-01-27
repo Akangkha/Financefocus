@@ -85,7 +85,7 @@ const Row3 = () => {
         <Box
           mt="0.5rem"
           p="0 0.5rem"
-          height="180px"
+          height="270px"
           sx={{
             "& .MuiDataGrid-root": {
               color: "#d1d3da",
@@ -104,7 +104,7 @@ const Row3 = () => {
         >
           <DataGrid
             columnHeaderHeight={25}
-            rowHeight={35}
+            rowHeight={40}
             hideFooter={true}
             rows={productData || []}
             columns={productColumns}

@@ -1,0 +1,20 @@
+.right form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 30%;
+  padding: 0% 10%;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right input {
+  padding: 8px 18px;
+  border-radius: 15px 55px;
+  outline: transparent;
+  border: 1px solid;
+}

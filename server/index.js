@@ -45,13 +45,16 @@ const PORT = process.env.PORT || 9000;
 
 // fetching()
 
-//rputes
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://financefocus.vercel.app");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.header("Access-Control-Allow-Headers", "Content-Type");
-  next();
-});
+//routes
+  // await mongoose.connection.db.dropDatabase;
+    // await KPI.insertMany(kpis);
+    // await Product.insertMany(products);
+    // await mongoose.connection.db.dropDatabase;
+    // await Transaction.insertMany(transactions);
+    // await Transaction.insertMany(transactions);
+    // const uploadedTrans= await Transaction.find();
+    // console.log(uploadedTrans);
+
 app.use("/kpi", kpiRoutes);
 app.use("/product", productRoutes);
 app.use("/transaction", transactionRoutes);
@@ -63,14 +66,7 @@ mongoose
   })
   .then(async () => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT} `));
-    // await mongoose.connection.db.dropDatabase;
-    // await KPI.insertMany(kpis);
-    // await Product.insertMany(products);
-    // await mongoose.connection.db.dropDatabase;
-    // await Transaction.insertMany(transactions);
-    // await Transaction.insertMany(transactions);
-    // const uploadedTrans= await Transaction.find();
-    // console.log(uploadedTrans);
+   
   })
-
   .catch((error) => console.log(`${error} did not connect`));
+ 

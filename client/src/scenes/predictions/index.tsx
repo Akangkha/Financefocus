@@ -15,6 +15,7 @@ import {
   YAxis,
 } from "recharts";
 import regression, { DataPoint } from "regression";
+import Navbar from "../navbar";
 
 const Predictions = () => {
   
@@ -43,6 +44,8 @@ const Predictions = () => {
   }, [kpiData]);
 
   return (
+    <>
+    <Navbar/>
     <DashboardBox width="100%" height="90vh" p="1rem" overflow="hidden">
       <FlexBetween m="1rem 2.5rem" gap="1rem">
         <Box>
@@ -115,6 +118,7 @@ const Predictions = () => {
         </LineChart>
       </ResponsiveContainer>
     </DashboardBox>
+    </>
   );
 };
 
