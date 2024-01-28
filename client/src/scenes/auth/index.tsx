@@ -5,7 +5,8 @@ import {
   getAuth,
   signOut,
   signInWithEmailAndPassword,
-  onAuthStateChanged,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
@@ -29,7 +30,7 @@ const Authorisation = () => {
 
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
-  const db = getFirestore(app);
+  const googleAuth = new GoogleAuthProvider();
   const handleChange = (event: any) => {
     setInput((prevInput) => ({
       ...prevInput,
@@ -45,6 +46,14 @@ const Authorisation = () => {
         localStorage.setItem("auth", "true");
       })
       .catch((error) => console.log(error.message));
+  };
+
+  const handleGoogleAuth = () => {
+    signInWithPopup(auth, googleAuth)
+      .then(() => {
+        console.log("logged in");
+      })
+      .catch((err) => console.log(err.message));
   };
 
   return (
@@ -106,7 +115,13 @@ const Authorisation = () => {
             >
               Don't have an account? <b>SignUP!</b>
             </Typography>
-            <Typography variant="h5" marginLeft={1} color="#71f5de">
+            <Typography
+              variant="h5"
+              marginLeft={1}
+              color="#71f5de"
+              onClick={handleGoogleAuth}
+              sx={{ pointer: "cursor" }}
+            >
               <b> SignIn using google</b>
             </Typography>
           </form>
