@@ -3,13 +3,11 @@ import { Box, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import {
   getAuth,
-  signOut,
   signInWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
 import "./style.css";
 import { useState } from "react";
 
