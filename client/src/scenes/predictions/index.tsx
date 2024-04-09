@@ -44,9 +44,9 @@ const Predictions = () => {
   }, [kpiData]);
 
   return (
-    <>
+    <div style={{margin:"10px"}}>
     <Navbar/>
-    <DashboardBox width="100%" height="90vh" p="1rem" overflow="hidden">
+    <DashboardBox width="98%" height="85vh" p="1rem" m="1.5rem" overflow="hidden">
       <FlexBetween m="1rem 2.5rem" gap="1rem">
         <Box>
           <Typography variant="h3">Revenue and Predictions</Typography>
@@ -118,7 +118,7 @@ const Predictions = () => {
         </LineChart>
       </ResponsiveContainer>
     </DashboardBox>
-    </>
+    </div>
   );
 };
 

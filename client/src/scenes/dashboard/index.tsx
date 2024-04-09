@@ -52,7 +52,7 @@ const gridTemplateSmallScreens = `
 const Dashboard = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1200px)");
   return localStorage.getItem("auth") ? (
-    <>
+    <div style={{margin:"10px"}}>
       <Navbar />
       <Box
         width="100%"
@@ -77,7 +77,7 @@ const Dashboard = () => {
         <Row2 />
         <Row3 />
       </Box>
-    </>
+    </div>
   ) : (
     <Authorisation />
   );

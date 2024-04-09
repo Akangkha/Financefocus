@@ -60,14 +60,16 @@ const Authorisation = () => {
   };
 
   return (
-    <Box
-      width="99vw"
-      height="95vh"
-      sx={{
+    <div
+      style={{
         background:
-          " linear-gradient(0deg, rgba(0,0,0,1) 30%, rgba(2,2,48,1) 85%)",
+          "linear-gradient(0deg, rgba(0,0,0,1) 30%, rgba(2,2,48,1) 85%)",
         display: "grid",
         placeItems: "center",
+        width: "100vw",
+        height: "100vh",
+        padding:"0",
+        margin:"0"
       }}
     >
       <FlexBetween
@@ -111,26 +113,26 @@ const Authorisation = () => {
               Next
             </Button>
 
-            <Typography
+            {/* <Typography
               variant="h5"
               marginLeft={1}
-              sx={{ "&:hover": { color: "#71f5de" } }}
+              sx={{ "&:hover": { color: "#71f5de" }, cursor: "pointer" }}
             >
               Don't have an account? <b>SignUP!</b>
-            </Typography>
+            </Typography> */}
             <Typography
               variant="h5"
               marginLeft={1}
               color="#71f5de"
               onClick={handleGoogleAuth}
-              sx={{ pointer: "cursor" }}
+              sx={{ pointer: "cursor", cursor: "pointer" }}
             >
               <b> SignUP using google</b>
             </Typography>
           </form>
         </Box>
       </FlexBetween>
-    </Box>
+    </div>
   );
 };
 
