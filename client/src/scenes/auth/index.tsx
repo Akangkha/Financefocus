@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import {
   getAuth,
   signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
@@ -16,7 +17,7 @@ const Authorisation = () => {
     email: "",
     password: "",
   });
-
+  const [newUser, setNewUser] = useState(false);
   const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
     authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
@@ -36,7 +37,24 @@ const Authorisation = () => {
     }));
   };
 
+  const createUser = () => {
+    console.log("Creating User with", input.email);
+    createUserWithEmailAndPassword(auth, input.email, input.password)
+      .then(() => {
+        window.location.href = "/";
+        localStorage.setItem("auth", "true");
+      })
+      .catch((error) => console.log(error.message));
+  };
   const handleNext = () => {
+    if (newUser) {
+      createUser();
+    } else {
+      signIn();
+    }
+  };
+
+  const signIn = () => {
     signInWithEmailAndPassword(auth, input.email, input.password)
       .then(() => {
         console.log("Logged In with", input.email);
@@ -45,7 +63,6 @@ const Authorisation = () => {
       })
       .catch((error) => console.log(error.message));
   };
-
   const handleGoogleAuth = async () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
@@ -68,8 +85,8 @@ const Authorisation = () => {
         placeItems: "center",
         width: "100vw",
         height: "100vh",
-        padding:"0",
-        margin:"0"
+        padding: "0",
+        margin: "0",
       }}
     >
       <FlexBetween
@@ -113,13 +130,14 @@ const Authorisation = () => {
               Next
             </Button>
 
-            {/* <Typography
+            <Typography
               variant="h5"
               marginLeft={1}
               sx={{ "&:hover": { color: "#71f5de" }, cursor: "pointer" }}
+              onClick={() => setNewUser(!newUser)}
             >
-              Don't have an account? <b>SignUP!</b>
-            </Typography> */}
+              Don't have an account? <b>{`${newUser ? "SignIn" : "SignUP"}`}</b>
+            </Typography>
             <Typography
               variant="h5"
               marginLeft={1}
