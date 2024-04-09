@@ -24,11 +24,11 @@ const Authorisation = () => {
     storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
     messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
     appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
   };
 
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
-  const googleAuth = new GoogleAuthProvider();
   const handleChange = (event: any) => {
     setInput((prevInput) => ({
       ...prevInput,
@@ -46,12 +46,17 @@ const Authorisation = () => {
       .catch((error) => console.log(error.message));
   };
 
-  const handleGoogleAuth = () => {
-    signInWithPopup(auth, googleAuth)
-      .then(() => {
-        console.log("logged in");
+  const handleGoogleAuth = async () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result.user);
+        window.location.href = "/";
+        localStorage.setItem("auth", "true");
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => {
+        console.log(err.message);
+      });
   };
 
   return (
@@ -120,7 +125,7 @@ const Authorisation = () => {
               onClick={handleGoogleAuth}
               sx={{ pointer: "cursor" }}
             >
-              <b> SignIn using google</b>
+              <b> SignUP using google</b>
             </Typography>
           </form>
         </Box>
