@@ -25,7 +25,7 @@ The MERN stack project aims to facilitate the retrieval and analysis of user-spe
 - **Predictive Analytics:**
   - Integrates a Regression model for predicting future financial trends, enabling the system to forecast next-year predictions based on historical data.
 
-Certainly! Here's a more professional version of the provided information:
+
 
 ---
 
