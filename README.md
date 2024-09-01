@@ -23,7 +23,7 @@ The MERN stack project aims to facilitate the retrieval and analysis of user-spe
   - Features a comprehensive dashboard that aggregates and displays calculated metrics, providing users with a centralized location for analyzing financial performance.
 
 - **Predictive Analytics:**
-  - Integrates a Regression model for predicting future financial trends, enabling the system to forecast next-year predictions based on historical data.
+  - Integrates a Regression model for predicting future financial trends, enabling the system to forecast next year predictions based on historical data.
 
 
 
